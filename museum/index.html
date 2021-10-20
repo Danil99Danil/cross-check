@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../museum/style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>museum</title>
 </head>
 <body>
@@ -34,8 +34,24 @@
                         </li>
                         <li class="nav-item">
                             <a href="#contacts" class="nav-links">Contacts</a>
+                        </li>
                     </ul>
                 </nav>
+                <div class="burger-menu">
+                    <input id="menu-toggle" type="checkbox">
+                    <label class="menu-btn" for="menu-toggle">
+                        <span></span>
+                    </label>
+                    
+                    <ul class="menu-box">
+                        <li><a href="#visiting" class="menu-item">Visiting ></a></li>
+                        <li><a href="#explore" class="menu-item">Explore ></a></li>
+                        <li><a href="#video" class="menu-item">Video ></a></li>
+                        <li><a href="#gallery" class="menu-item">Gallery ></a></li>
+                        <li><a href="#tickets" class="menu-item">Tickets ></a></li>
+                        <li><a href="#contacts" class="menu-item">Contacts ></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -55,7 +71,7 @@
                 </div>
             </div>
         </section>
-        <section id="visiting">
+         <section id="visiting">
             <a name="visiting"></a>
             <div class="wrapper">
                 <h2 class="title-with-line gold heading-indent">Virtual tour</h2>
@@ -167,28 +183,49 @@
         </section>
         <section id="gallery">
             <div class="wrapper">
-                <h5 class="title-without-line white heading-indent">Art Gallery</h5>
-                <div class="gallery-pictures heading-indent">
+                <!-- <h5 class="title-without-line white heading-indent">Art Gallery</h5> -->
+                <div class="picture-container">
+                    <h5 class="title-without-line white heading-indent">Art Gallery</h5>
+                    <div class="picture-inner-container heading-indent">
+                        <img class="" src="./assets/img/gallery git/galery1.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery2.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery3.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery4.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery5.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery6.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery7.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery8.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery9.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery10.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery11.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery12.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery13.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery14.jpg" alt="gallery pictures">
+                        <img class="" src="./assets/img/gallery git/galery15.jpg" alt="gallery pictures">
+                    </div>
+                    <!-- <div class="background"></div> -->
+                </div>
+                <!-- <div class="gallery-pictures heading-indent">
                     <div class="left-section-gallery">
-                        <img class="gallery-pic magr-bt-24" src="../museum/assets/img/gallery/galery2 1.jpg" alt="gallery pic 1">
-                        <img class="gallery-pic magr-bt-24" src="../museum/assets/img/gallery/galery9 1.jpg" alt="gallery pic 2">
-                        <img class="gallery-pic magr-bt-24" src="../museum/assets/img/gallery/galery4 1.jpg" alt="gallery pic 3">
-                        <img class="gallery-pic" src="../museum/assets/img/gallery/galery6 1.jpg" alt="gallery pic 4">
+                        <img class="gallery-pic magr-bt-24" src="./assets/img/gallery/galery2 1.jpg" alt="gallery pic 1">
+                        <img class="gallery-pic magr-bt-24" src="./assets/img/gallery/galery9 1.jpg" alt="gallery pic 2">
+                        <img class="gallery-pic magr-bt-24" src="./assets/img/gallery/galery4 1.jpg" alt="gallery pic 3">
+                        <img class="gallery-pic" src="./assets/img/gallery/galery6 1.jpg" alt="gallery pic 4">
                     </div>
                     <div class="mid-section-gallery">
-                        <img class="gallery-pic magr-bt-24" src="../museum/assets/img/gallery/galery1 1.jpg" alt="gallery pic 5">
-                        <img class="gallery-pic magr-bt-24" src="../museum/assets/img/gallery/galery8 1.jpg" alt="gallery pic 6">
-                        <img class="gallery-pic magr-bt-24" src="../museum/assets/img/gallery/galery3 1.jpg" alt="gallery pic 7">
-                        <img class="gallery-pic" src="../museum/assets/img/gallery/galery5 1.jpg" alt="gallery pic 8">
+                        <img class="gallery-pic magr-bt-24" src="./assets/img/gallery/galery1 1.jpg" alt="gallery pic 5">
+                        <img class="gallery-pic magr-bt-24" src="./assets/img/gallery/galery8 1.jpg" alt="gallery pic 6">
+                        <img class="gallery-pic magr-bt-24" src="./assets/img/gallery/galery3 1.jpg" alt="gallery pic 7">
+                        <img class="gallery-pic" src="./assets/img/gallery/galery5 1.jpg" alt="gallery pic 8">
                     </div>
                     <div class="right-section-gallery">
-                        <img class="gallery-pic magr-bt-24" src="../museum/assets/img/gallery/galery7 1.jpg" alt="gallery pic 9">
-                        <img class="gallery-pic magr-bt-24" src="../museum/assets/img/gallery/galery10 1.jpg" alt="gallery pic 10">
-                        <img class="gallery-pic magr-bt-24" src="../museum/assets/img/gallery/galery15 1.jpg" alt="gallery pic 11">
-                        <img class="gallery-pic" src="../museum/assets/img/gallery/galery12 1.jpg" alt="gallery pic 12">
+                        <img class="gallery-pic magr-bt-24" src="./assets/img/gallery/galery7 1.jpg" alt="gallery pic 9">
+                        <img class="gallery-pic magr-bt-24" src="./assets/img/gallery/galery10 1.jpg" alt="gallery pic 10">
+                        <img class="gallery-pic magr-bt-24" src="./assets/img/gallery/galery15 1.jpg" alt="gallery pic 11">
+                        <img class="gallery-pic" src="./assets/img/gallery/galery12 1.jpg" alt="gallery pic 12">
                     </div>
                     <div class="background"></div>
-                </div>
+                </div> -->
             </div>
         </section>
         <section id="tickets">

@@ -47,6 +47,7 @@
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .heading-indent {
@@ -75,6 +76,14 @@
 
 .marg-bt-60 {
     margin-bottom: 60px;
+}
+
+.marg-bt-24 {
+    margin-bottom: 24px;
+}
+
+.mrg-bt-75 {
+    margin-bottom: 75px;
 }
 
 /*HEADER START*/
@@ -128,29 +137,44 @@
 .nav-links:hover {
     opacity: .75;
 }
+
+.burger-menu {
+    display: none;
+}
 /*HEADER STOP*/
 
 
 /*WELCOME START*/
 #welcome {
     background: #030303;
-    min-height: 810px;
+    /* min-height: 810px; */
 }
 
 .welcome-container {
     position: relative;
     display: flex;
     justify-content: space-between;
-    background-image: url(../museum/assets/img/monaLisa.jpg);
+    background-image: url(./assets/img/monaLisa.jpg);
+    /* background-position: calc(100% - 20px) calc(100% - 10px); */
     background-size: auto;
     background-repeat: no-repeat;
     background-position-x: right;
     height: 810px;
+    /* position: relative;
+    display: flex;
+    background-image: url(./assets/img/monaLisa.jpg);
+    background-position: calc(100% - 20px) calc(-10% - 10px);
+    background-repeat: no-repeat;
+    height: 810px; */
 }
 
 .welcome-title-and-button {
    padding-top: 150px;
 }
+
+/* #menu-toggle:checked ~ .welcome-title-and-button {
+
+} */
 
 .welcome-title {
     font-family: 'Forum';
@@ -197,7 +221,7 @@
     height: 120px;
     right: 0px;
     bottom: 0px;
-    background: #030303;
+    background: #c22222;
 }
 
 
@@ -378,7 +402,25 @@
     background: #030303;
 }
 
-.gallery-pictures {
+.picture-container {
+    height: 2125px;
+    overflow-y: hidden;
+}
+
+.picture-inner-container {
+    columns: 456px 3;
+    column-gap: 36px;
+}
+
+.background {
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    bottom: 0;
+    width: 100%;
+    height: 360px;
+}
+
+/* .gallery-pictures {
     position: relative;
     display: flex;
     gap: 36px;
@@ -418,7 +460,7 @@
     bottom: 0;
     width: 100%;
     height: 360px;
-}
+} */
 /*GALLERY STOP*/
 
 
@@ -613,7 +655,179 @@
 }
 /*FOOTER STOP*/
 
-@media (max-width: 1450px){
+@media (max-width: 1024px){
+    .header {
+        min-height: 120px;
+    }
+
+    .header-content {
+        padding-top: 51px;
+    }
+
+    .header-container-nav {
+        display: none;
+    }
+
+    .welcome-container {
+        background-size: 700px 525px;
+        max-height: 585px;
+        /* position: relative; */
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* background-image: url(./assets/img/monaLisa.jpg); */
+        /* background-position: calc(100% - 20px) calc(100% - 10px); */
+        /* background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: right; */
+    }
+
+    .welcome-title-and-button {
+        padding-top: 50px;
+    }
+
+    .welcome-title {
+        font-family: Forum;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 50px;
+        line-height: 90px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    .welcome-subtitle {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 2px;
+        color: #FFFFFF;
+    }
+
+    .discover-button {
+        width: 300px;
+        height: 60px;
+        background: #710707;
+        border-radius: 10px;
+        border: 0;
+        font-family: roboto-light;
+        font-size: 20px;
+        letter-spacing: 2px;
+        color: #FFFFFF;
+    }
+
+    .welcome-slider {
+        min-width: 700px
+    }
+
+    .burger-menu {
+        display: initial;
+    }
+
+    #menu-toggle {
+        opacity: 0;
+    }
+    
+    .menu-btn {
+        display: flex; /* используем flex для центрирования содержимого */
+        align-items: center;  /* центрируем содержимое кнопки */
+        position: fixed;
+        top: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+      /* добавляем "гамбургер" */
+      .menu-btn > span,
+      .menu-btn > span::before,
+      .menu-btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+    }
+    
+    .menu-btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    
+    .menu-btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    
+    .menu-box {
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        top: 120px;
+        left: -100%;
+        width: 297px;
+        height: 425px;
+        margin: 0;
+        padding: 80px 0px;
+        list-style: none;
+        text-align: center;
+        background-color: #0491ef;
+        box-shadow: 1px 0px 6px rgb(0 0 0 / 20%);
+        /* display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2); */
+    }
+    
+    .menu-item {
+        display: block;
+        padding: 12px 24px;
+        font-family: roboto-light;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 2px;
+        color: #FFFFFF
+    }
+    
+    .menu-item:hover {
+        background-color: #CFD8DC;
+    }
+
+    #menu-toggle:checked ~ .welcome-title-and-button {
+        display: none;
+    }
+    
+    #menu-toggle:checked ~ .menu-btn > span {
+        transform: rotate(45deg);
+      }
+      #menu-toggle:checked ~ .menu-btn > span::before {
+        top: 0;
+        transform: rotate(0);
+      }
+      #menu-toggle:checked ~ .menu-btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+      #menu-toggle:checked ~ .menu-box {
+        visibility: visible;
+        left: 0;
+      }
+
+   
+}
+
+ @media (max-width: 1450px){
     .wrapper {
         padding: 0 20px;
     }
@@ -636,7 +850,7 @@
 
 }
 
-@media (max-width: 1024px){
+ @media (max-width: 1024px){
 
     .header-container-nav {
         display: none;
@@ -693,7 +907,7 @@
         margin-right: 30px;
         gap: 25px 50px;
     }
-}
+} 
 
 
 
