@@ -169,12 +169,8 @@
 }
 
 .welcome-title-and-button {
-   padding-top: 150px;
+    padding-top: 150px;
 }
-
-/* #menu-toggle:checked ~ .welcome-title-and-button {
-
-} */
 
 .welcome-title {
     font-family: 'Forum';
@@ -224,11 +220,9 @@
     background: #c22222;
 }
 
-
 .welcome-pictures {
     margin-left: auto;
 }
-
 /*WELCOME STOP*/
 
 
@@ -405,6 +399,7 @@
 .picture-container {
     height: 2125px;
     overflow-y: hidden;
+    position: relative;
 }
 
 .picture-inner-container {
@@ -655,7 +650,41 @@
 }
 /*FOOTER STOP*/
 
-@media (max-width: 1024px){
+@media (max-width: 1481px) {
+    /*VISITING*/
+    .places-cards {
+        gap: 75px 4%;
+    }
+
+    .cards-hover {
+        width: 100%;
+    }  
+
+    .description-card {
+        font-size: 25px;
+        letter-spacing: 3px;
+    }
+    /*VISITING STOP*/
+
+
+    /*EXPLORE*/
+    .explore-img {
+        width: 650px;
+        height: 680px;
+    }
+
+    .explore-content {
+        gap: 20px;
+    }
+
+    .text-content-title {
+        font-size: 20px;
+    }
+    /*EXPLORE STOP*/
+}
+
+@media (max-width: 1024px) {
+    /*HEADER*/
     .header {
         min-height: 120px;
     }
@@ -667,18 +696,13 @@
     .header-container-nav {
         display: none;
     }
+    /*HEADER STOP*/
 
+
+    /*WELCOME*/
     .welcome-container {
         background-size: 700px 525px;
         max-height: 585px;
-        /* position: relative; */
-        /* display: flex; */
-        /* justify-content: space-between; */
-        /* background-image: url(./assets/img/monaLisa.jpg); */
-        /* background-position: calc(100% - 20px) calc(100% - 10px); */
-        /* background-size: contain;
-        background-repeat: no-repeat;
-        background-position-x: right; */
     }
 
     .welcome-title-and-button {
@@ -686,42 +710,26 @@
     }
 
     .welcome-title {
-        font-family: Forum;
-        font-style: normal;
-        font-weight: normal;
         font-size: 50px;
-        line-height: 90px;
-        letter-spacing: 5px;
-        text-transform: uppercase;
-        color: #FFFFFF;
     }
 
     .welcome-subtitle {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 300;
         font-size: 24px;
-        line-height: 28px;
-        letter-spacing: 2px;
-        color: #FFFFFF;
     }
 
     .discover-button {
         width: 300px;
         height: 60px;
-        background: #710707;
-        border-radius: 10px;
-        border: 0;
-        font-family: roboto-light;
         font-size: 20px;
-        letter-spacing: 2px;
-        color: #FFFFFF;
     }
 
     .welcome-slider {
         min-width: 700px
     }
+    /*WELCOME STOP*/
 
+
+    /*BURGER*/
     .burger-menu {
         display: initial;
     }
@@ -731,10 +739,11 @@
     }
     
     .menu-btn {
-        display: flex; /* используем flex для центрирования содержимого */
-        align-items: center;  /* центрируем содержимое кнопки */
+        display: flex;
+        align-items: center;
         position: fixed;
-        top: 20px;
+        top: 52px;
+        right: 20px;
         width: 26px;
         height: 26px;
         cursor: pointer;
@@ -775,19 +784,6 @@
         text-align: center;
         background-color: #0491ef;
         box-shadow: 1px 0px 6px rgb(0 0 0 / 20%);
-        /* display: block;
-        position: fixed;
-        visibility: hidden;
-        top: 0;
-        left: -100%;
-        width: 300px;
-        height: 100%;
-        margin: 0;
-        padding: 80px 0;
-        list-style: none;
-        text-align: center;
-        background-color: #ECEFF1;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2); */
     }
     
     .menu-item {
@@ -804,34 +800,105 @@
         background-color: #CFD8DC;
     }
 
-    #menu-toggle:checked ~ .welcome-title-and-button {
-        display: none;
-    }
-    
     #menu-toggle:checked ~ .menu-btn > span {
         transform: rotate(45deg);
       }
-      #menu-toggle:checked ~ .menu-btn > span::before {
+    #menu-toggle:checked ~ .menu-btn > span::before {
         top: 0;
         transform: rotate(0);
       }
-      #menu-toggle:checked ~ .menu-btn > span::after {
+    #menu-toggle:checked ~ .menu-btn > span::after {
         top: 0;
         transform: rotate(90deg);
       }
-      #menu-toggle:checked ~ .menu-box {
+
+    #menu-toggle:checked ~ .menu-box {
         visibility: visible;
         left: 0;
       }
-
-   
-}
-
- @media (max-width: 1450px){
-    .wrapper {
-        padding: 0 20px;
+    
+    #menu-toggle:checked ~ .welcome-container > .welcome-title-and-button {
+        display: none;
     }
 
+    /*BURGER STOP*/
+
+
+    /*VISITING*/
+    .places-cards {
+        display: grid;
+        justify-content: center;
+        grid-template: repeat(3, 1fr) / repeat(2, 330px);
+    }
+
+    .title-with-line {
+        font-size: 50px;
+    }
+
+    .description-card {
+        font-size: 28px;
+        line-height: 31px;
+        letter-spacing: 3px;
+    }
+
+    .virtual-overview {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .virtual-overview-subtitle {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    /*VISITING STOP*/
+
+
+    /*EXPLORE*/
+    .show-tablet{
+        display: block;
+    }
+
+    .hide-tablet{
+        display: none;
+    }
+
+    .explore-content{
+        flex-direction: column;
+    }
+
+    .explore-pictures {
+        justify-content: center;
+        padding-top: 90px;
+        margin-bottom: 75px;
+        display: flex;
+    }
+    /*EXPLORE STOP*/
+
+
+    /*VIDEO*/
+    .title-without-line {
+        font-size: 50px;
+        line-height: 75px;
+    }
+
+    .text-about-video {
+        display: none;
+    }
+    .heading-indent {
+        padding-top: 60px;
+    }
+
+    .title-text {
+        margin-bottom: 40px;
+    }
+    /*VIDEO STOP*/
+
+    /*GLLAERY*/
+
+    /*GLLAERY STOP*/
+}
+
+ /* @media (max-width: 1450px){
     .places-cards {
         display: grid;
         justify-content: center;
@@ -841,17 +908,16 @@
     .cards-hover {
         width: 100%;
     }  
-}
+} */
 
-@media (max-width: 1290px){
+/* @media (max-width: 1290px){
     .ticket-type {
         display: none;
     }
 
-}
+} */
 
- @media (max-width: 1024px){
-
+ /* @media (max-width: 1024px){
     .header-container-nav {
         display: none;
     }
@@ -907,7 +973,7 @@
         margin-right: 30px;
         gap: 25px 50px;
     }
-} 
+}  */
 
 
 
