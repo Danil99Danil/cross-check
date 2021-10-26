@@ -407,6 +407,12 @@
     column-gap: 36px;
 }
 
+.gallery-img {
+    margin-bottom: 24px;
+    display: block;
+    width: 100%
+}
+
 .background {
     position: absolute;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
