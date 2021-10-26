@@ -155,22 +155,20 @@
     display: flex;
     justify-content: space-between;
     background-image: url(./assets/img/monaLisa.jpg);
-    /* background-position: calc(100% - 20px) calc(100% - 10px); */
     background-size: auto;
     background-repeat: no-repeat;
     background-position-x: right;
     height: 810px;
-    /* position: relative;
-    display: flex;
-    background-image: url(./assets/img/monaLisa.jpg);
-    background-position: calc(100% - 20px) calc(-10% - 10px);
-    background-repeat: no-repeat;
-    height: 810px; */
 }
 
 .welcome-title-and-button {
+    display: initial;
     padding-top: 150px;
 }
+
+/* .welcome-none {
+    display: none;
+} */
 
 .welcome-title {
     font-family: 'Forum';
@@ -857,13 +855,16 @@
         visibility: visible;
         left: 0;
       }
-    
-    #menu-toggle:checked ~ .welcome-container > .welcome-title-and-button {
+
+    #menu-toggle:checked ~ .welcome-title-and-button {
         display: none;
     }
 
     /*BURGER STOP*/
-
+    .welcome-none {
+        background-color: red;
+        display: none;
+    }
 
     /*VISITING*/
     .places-cards {
