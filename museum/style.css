@@ -725,7 +725,7 @@
 @media (max-width: 1024px) {
     /*HEADER*/
     .header {
-        min-height: 120px;
+        min-height: 130px;
     }
 
     .header-content {
@@ -810,29 +810,26 @@
     }
     
     .menu-box {
-        display: block;
+        display: flex;
         position: absolute;
         visibility: hidden;
-        top: 120px;
+        top: 130px;
         left: -100%;
         width: 297px;
-        height: 425px;
-        margin: 0;
-        padding: 80px 0px;
-        list-style: none;
-        text-align: center;
-        background-color: #0491ef;
-        box-shadow: 1px 0px 6px rgb(0 0 0 / 20%);
+        height: 585px;
+        flex-direction: column;
+        padding-top: 35px;
+        margin-left: 55px;
     }
-    
+
     .menu-item {
         display: block;
-        padding: 12px 24px;
         font-family: roboto-light;
         font-size: 20px;
         line-height: 23px;
         letter-spacing: 2px;
-        color: #FFFFFF
+        color: #FFFFFF; 
+        padding-top: 25px;
     }
     
     .menu-item:hover {
@@ -1046,7 +1043,4 @@
         gap: 25px 50px;
     }
 }  */
-
-
-
 
