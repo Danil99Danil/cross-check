@@ -162,13 +162,16 @@
 }
 
 .welcome-title-and-button {
-    display: initial;
     padding-top: 150px;
 }
 
-/* .welcome-none {
+.welcome-title-none-button {
     display: none;
-} */
+}
+
+.welcome-none {
+    display: none;
+}
 
 .welcome-title {
     font-family: 'Forum';
@@ -654,6 +657,7 @@
 .busement-list {
     display: flex;
     gap: 25px;
+    margin-left: 15px;
 }
 
 .busement-link:hover {
@@ -818,8 +822,6 @@
         width: 297px;
         height: 585px;
         flex-direction: column;
-        padding-top: 35px;
-        margin-left: 55px;
     }
 
     .menu-item {
@@ -829,39 +831,40 @@
         line-height: 23px;
         letter-spacing: 2px;
         color: #FFFFFF; 
-        padding-top: 25px;
+        margin-left: 55px;
     }
-    
-    .menu-item:hover {
-        background-color: #CFD8DC;
+
+    .mennu-item:hover {
+        opacity: 0.75px;
+    }
+
+    body > header > div > div > div.burger-menu > ul > li:nth-child(1) {
+        padding-top: 35px;
+    }
+
+    body > header > div > div > div.burger-menu > ul > li:not(:first-child) {
+        padding-top: 25px;
     }
 
     #menu-toggle:checked ~ .menu-btn > span {
         transform: rotate(45deg);
-      }
+    }
     #menu-toggle:checked ~ .menu-btn > span::before {
         top: 0;
         transform: rotate(0);
-      }
+    }
     #menu-toggle:checked ~ .menu-btn > span::after {
         top: 0;
         transform: rotate(90deg);
-      }
+    }
 
     #menu-toggle:checked ~ .menu-box {
         visibility: visible;
         left: 0;
-      }
-
-    #menu-toggle:checked ~ .welcome-title-and-button {
-        display: none;
+        z-index: 10;
     }
-
     /*BURGER STOP*/
-    .welcome-none {
-        background-color: red;
-        display: none;
-    }
+
 
     /*VISITING*/
     .places-cards {
@@ -965,6 +968,172 @@
         margin-left: 45px;
     }
     /*FOOTER STOP*/
+}
+
+@media (max-width: 935px) {
+    .footer-nav {
+        gap: 25px 20px;
+        margin-left: 20px;
+    }
+
+    .busement-list {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .heading-indent {
+        padding-top: 40px;
+    }
+
+    /*HEADER*/
+    .header {
+        min-height: 110px;
+    }
+
+    .header-content {
+        padding-top: 40px;
+    }
+
+    .menu-btn {
+        top: 42px;
+    }
+    /*HEADER STOP*/
+
+
+
+    /*WELCOME*/
+    #welcome {
+        height: 861px;
+    }
+
+    .welcome-container {
+        background-image: url(./assets/img/background1.jpg);
+        background-size: 728px 546px;
+    }
+
+    .welcome-title-and-button {
+        display: none;
+    }
+
+    .welcome-title-none-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .welcome-title {
+        font-size: 40px;
+        line-height: 60px;
+        text-align: center;
+    }
+
+    .welcome-subtitle {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .welcome-slider {
+        height: 87px;
+        width: 100%;
+        bottom: -47px;
+        min-width: 0;
+    }
+    /*WELCOME STOP*/
+
+    /*VIRTUAL*/
+
+    .title-with-line {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .places-cards {
+        grid-template: repeat(3, 1fr) / repeat(2, 280px);
+    }
+
+    .description-card {
+        font-size: 22px;
+        line-height: 24px;
+        letter-spacing: 3px;
+    }
+
+    hr {
+        width: 150px;
+        height: 2px;
+    }
+    /*VIRTUAL STOP*/
+
+    /*EXPLORE*/
+    .text-about-explore {
+        display: none;
+    }
+
+    .explore-content {
+        gap: 40px;
+    }
+
+    .explore-pictures {
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .explore-img {
+        width: 100%;
+        height: auto;
+    }
+    /*EXPLORE STOP*/
+
+    /*VIDEO*/
+    .title-without-line {
+        font-size: 40;
+        line-height: 60px;
+    }
+    /*VIDEO STOP*/
+
+
+    /*GALLERY*/
+    .picture-container {
+        height: 1220px;
+    }
+    /*GALLERY STOP*/
+
+
+
+    .marg-bt-50 {
+        margin-bottom: 40px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 638px;
+        justify-content: space-between;
+    }
+
+    .footer-nav {
+        gap: 25px 162px;
+    }
+
+    .busement-list {
+        gap: 25px;
+    }
+
+    .nav-links {
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+    }
+
+    .links {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-left: auto;
+        margin-top: 50px;
+    }
 }
 
  /* @media (max-width: 1450px){
