@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styleCSS.css">
     <title>museum</title>
     <link rel="icon" href="./assets/svg/logo.svg">
 </head>
-
-
-
-
-
 <body>
     <header class="header">
         <div class="wrapper">
             <div class="header-content">
                 <div class="container-logo">
-                    <a href=""><img src=".//assets/svg/logo.svg" alt="logo"></a>
+                    <a href=""><img class="icon-logo" src=".//assets/svg/logo.svg" alt="logo"></a>
                     <a class="text-logo" href="/museum/index.html">louvre</a>
                 </div>
                 <nav class="header-container-nav">
@@ -64,24 +59,92 @@
     <main class="main">
         <section id="welcome">
             <div class="wrapper">
+                <div class="jopa"></div>
+                <div class="welcome-slider">
+                    <div class="slider-in-welcome">
+                        <div class="slider-item">
+                            <img src="./assets/img/welcome-slider/1.jpg" height="100%" width="100%" alt="">
+                        </div>
+                        <div class="slider-item">
+                            <img src="./assets/img/welcome-slider/2.jpg" height="100%" width="100%" alt="">
+                        </div>
+                        <div class="slider-item">
+                            <img src="./assets/img/welcome-slider/3.jpg" height="100%" width="100%" alt="">
+                        </div>
+                        <div class="slider-item">
+                            <img src="./assets/img/welcome-slider/4.jpg" height="100%" width="100%" alt="">
+                        </div>
+                        <div class="slider-item">
+                            <img src="./assets/img/welcome-slider/5.jpg" height="100%" width="100%" alt="">
+                        </div>
+                    </div>
+                    <p class="count slid-pic">01</p>
+                    <p class="count elem-stick">|</p>
+                    <p class="count total-amount">05</p>
+                </div>
+
                 <div class="welcome-title-none-button">
                     <h1 class="welcome-title">welcome <br> to the louvre</h1>
                     <h2 class="welcome-subtitle">From the castle to the museum</h2>
                 </div>
-                <div class="welcome-container">
-                    <div class="welcome-title-and-button">
-                        <h1 class="welcome-title">welcome <br> to the louvre</h1>
-                        <h2 class="welcome-subtitle">From the castle to the museum</h2>
-                        <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" target="_blanck">
-                            <button class="discover-button">Discover the Louvre</button>
-                        </a>
+
+                <div class="welcome-title-and-button">
+                    <h1 class="welcome-title">welcome <br> to the louvre</h1>
+                    <h2 class="welcome-subtitle">From the castle to the museum</h2>
+                    <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" target="_blanck">
+                        <button class="discover-button">Discover the Louvre</button>
+                    </a>
+                </div>
+
+                <div class="welcome-gallery hide">
+                    <dir compact="welcome-gallery-first">
+                        <img class="welcome-gallery-item" src="../слайдер ебаного музея/assets/img/image 15.png" width="100%" height="100%">
+                    </dir>
+                    <div class="welcome-gallery-second">
+                        <img class="welcome-gallery-item" src="../слайдер ебаного музея/assets/img/image 16.png" width="100%">
+                        <img class="welcome-gallery-item" src="../слайдер ебаного музея/assets/img/image 17.png" width="100%">
                     </div>
-                    <div class="welcome-slider"> 
+                    <div class="welcome-gallery-second-420 hide">
+                        <img class="welcome-gallery-item" src="../слайдер ебаного музея/assets/img/image 16.png" width="100%" height="100%">
                     </div>
+                    <div class="welcome-gallery-three hide">
+                        <img class="welcome-gallery-item" src="../слайдер ебаного музея/assets/img/image 17.png" width="100%" height="100%">
+                    </div>
+                </div>
+
+            
+                <div class="welcome-social-network hide">
+                    <hr class="line-network">
+                    <ul class="busement-list">
+                        <li class="busement-link">
+                            <a href="https://www.youtube.com/user/louvre" target="_blanck">
+                                <img src="../слайдер ебаного музея/assets/svg/Youtube.svg" alt="Youtube">
+                            </a>
+                        </li>
+                        <li class="busement-link">
+                            <a href="https://www.instagram.com/museelouvre/" target="_blanck">
+                                <img src="../слайдер ебаного музея/assets/svg/Instagram.svg" alt="Instagram">
+                            </a>
+                        </li>
+                        <li class="busement-link">
+                            <a href="http://twitter.com/museelouvre" target="_blanck">
+                                <img src="../слайдер ебаного музея/assets/svg/Twitter.svg" alt="Twitter">
+                            </a>
+                        </li>
+                        <li class="busement-link">
+                            <a href="https://www.facebook.com/museedulouvre" target="_blanck">
+                                <img src="../слайдер ебаного музея/assets/svg/Facebook.svg" alt="Facebook">
+                            </a>
+                        </li>
+                        <li class="busement-link">
+                            <a href="https://www.pinterest.fr/museedulouvre/" target="_blanck">
+                                <img src="../слайдер ебаного музея/assets/svg/Pinterest.svg" alt="Pinterest">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <script src="./js/welcome.js"></script>
         <section id="visiting">
             <a name="visiting"></a>
             <div class="wrapper">
@@ -172,18 +235,25 @@
                     <p class="text-about-video">Enter and visit one of the most famous museums in the world and enjoy <br> masterpieces such as Mona Lisa or Hammurabi's Code</p>
                 </div>
                 <div class="video-player">
-                    <video width="100%" poster="../museum/assets/img/videoPic.jpg" controls></video>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xJxH-QuJeXo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <video width="100%" poster="../слайдер ебаного музея/assets/img/videoPic.jpg" controls></video> -->
                 </div>
                 <div class="video-slider">
                     <div class="slider">
                         <div class="slider-item">
-                            <img src="../museum/assets/img/poster1.jpg" alt="slider pic 1">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="slider-item">
-                            <img src="../museum/assets/img/poster2.jpg" alt="slider pic 2">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="slider-item">
-                            <img src="../museum/assets/img/poster3.jpg" alt="slider pic 3">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="slider-item">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="slider-item">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -249,27 +319,27 @@
                             <div class="basic">
                                 <p class="text-content marg-bt-15">Basic 18+</p>
                                 <div class="input-number">
-                                <button class="number minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"><a href="#!" class="minus">-</a></button>
-                                <input type="number" min="0" max="100">
-                                <button class="number plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"><a href="#!" class="plus">+</a></button>
+                                    <button class="number minus" type="button" onclick="this.nextElementSibling.stepDown();"><a href="#!" class="minus">-</a></button>
+                                    <input class="number-of-ticketsBasic" type="number" min="0" max="100">
+                                    <button class="number plus" type="button" onclick="this.previousElementSibling.stepUp();"><a href="#!" class="plus">+</a></button>
                                 </div>
                             </div>
                             <div class="senior">
                                 <p class="text-content marg-bt-15">Senior 65+</p>
                                 <div class="input-number">
-                                    <button class="number minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"><a href="#!" class="minus">-</a></button>
-                                    <input type="number" min="0" max="100">
-                                    <button class="number plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"><a href="#!" class="plus">+</a></button>
+                                    <button class="number minus" type="button" onclick="this.nextElementSibling.stepDown();"><a href="#!" class="minus">-</a></button>
+                                    <input class="number-of-ticketsSenior" type="number" min="0" max="100">
+                                    <button class="number plus" type="button" onclick="this.previousElementSibling.stepUp();"><a href="#!" class="plus">+</a></button>
                                 </div>
                             </div>    
-                            <p id="clicks1" class="text-content-title-tickets marg-bt-60">Total €</p>
+                            <p id="clicks1" class="text-content-title-tickets marg-bt-60">Total €<span id="price"> 0</span></p>
                             <button class="ticket-buy-button">Buy Now</button>
                     </div>
                 </div>
             </div>
-            <img class="img-no-wrapper heading-indent" src="../museum/assets/img/picwithoutwrapp.jpg" alt="pictures louvre">
+            <div class="img-no-wrapper"></div>
         </section>
-        <!-- <section id="contacts">
+        <section id="contacts">
             <div class="wrapper">
                 <h7 class="title-with-line gold">contacts</h7>
                 <div class="contacts-content heading-indent">
@@ -319,27 +389,27 @@
                         <ul class="busement-list">
                             <li class="busement-link">
                                 <a href="https://www.youtube.com/user/louvre" target="_blanck">
-                                    <img src="../museum/assets/svg/Youtube.svg" alt="Youtube">
+                                    <img src="./assets/svg/Youtube.svg" alt="Youtube">
                                 </a>
                             </li>
                             <li class="busement-link">
                                 <a href="https://www.instagram.com/museelouvre/" target="_blanck">
-                                    <img src="../museum/assets/svg/Instagram.svg" alt="Instagram">
+                                    <img src="./assets/svg/Instagram.svg" alt="Instagram">
                                 </a>
                             </li>
                             <li class="busement-link">
                                 <a href="http://twitter.com/museelouvre" target="_blanck">
-                                    <img src="../museum/assets/svg/Twitter.svg" alt="Twitter">
+                                    <img src="./assets/svg/Twitter.svg" alt="Twitter">
                                 </a>
                             </li>
                             <li class="busement-link">
                                 <a href="https://www.facebook.com/museedulouvre" target="_blanck">
-                                    <img src="../museum/assets/svg/Facebook.svg" alt="Facebook">
+                                    <img src="./assets/svg/Facebook.svg" alt="Facebook">
                                 </a>
                             </li>
                             <li class="busement-link">
                                 <a href="https://www.pinterest.fr/museedulouvre/" target="_blanck">
-                                    <img src="../museum/assets/svg/Pinterest.svg" alt="Pinterest">
+                                    <img src="./assets/svg/Pinterest.svg" alt="Pinterest">
                                 </a>
                             </li>
                         </ul>
@@ -355,7 +425,7 @@
                         <a href="#!" class="nav-links">© 2021</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#!" class="nav-links">The Rolling Scopes School</a>
+                        <a href="#!" class="nav-links RollingSS">The Rolling Scopes School</a>
                     </li>
                     <li class="nav-item">
                         <a href="#!" class="nav-links">Username</a>
@@ -363,15 +433,13 @@
                 </ul>
             </div>
         </div>
-    </footer> -->
+    </footer>
+    <script src="./scripts/welcomeScript.js"></script>
     <!-- video slider -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../museum/js/slick.min.js"></script>
-    <script src="../museum/js/script.js"></script>
+    <script src="./scripts/slick.min.js"></script>
+    <script src="./scripts/sliders.js"></script>
     <!-- video slider stop-->
-
-    <!-- gallery random photo -->
-    <script src="./js/gallery.js"></script>
-    <!-- gallery random photo stop-->
+    <script src="./scripts/ticketsScript.js"></script>
 </body>
 </html>

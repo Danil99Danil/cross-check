@@ -33,7 +33,7 @@
     font-family: 'forum-regular';
     font-style: normal;
     font-weight: normal;
-    src: url(../museum/assets/fonts/Forum-Regular.ttf);
+    src: url(.//assets/fonts/Forum-Regular.ttf);
   }
  
   * {
@@ -48,6 +48,7 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
 }
 
 .heading-indent {
@@ -88,7 +89,7 @@
 
 /*HEADER START*/
 .header {
-    min-height: 150px;
+    height: 150px;
     background: #030303;
 }
 
@@ -101,7 +102,6 @@
 }
 
 .container-logo {
-    display: flex;
     display: flex;
     gap: 21px;
 }
@@ -147,22 +147,17 @@
 /*WELCOME START*/
 #welcome {
     background: #030303;
-    /* min-height: 810px; */
+    height: 810px;
 }
 
 .welcome-container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    background-image: url(./assets/img/monaLisa.jpg);
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position-x: right;
     height: 810px;
 }
 
 .welcome-title-and-button {
+    position: relative;
     padding-top: 150px;
+    z-index: 20;
 }
 
 .welcome-title-none-button {
@@ -171,6 +166,27 @@
 
 .welcome-none {
     display: none;
+}
+
+.welcRed {
+    position: relative;
+    top: 348px;
+    height: 375px;
+}
+
+.welcome-social-network {
+    gap: 21px;
+    position: relative;
+    top: 383px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.line-network {
+    width: 100%;
+    height: 0px;
+    background: #FFFFFF;
 }
 
 .welcome-title {
@@ -212,19 +228,126 @@
     opacity: .75;
 }
 
-.welcome-slider {
-    position: absolute;
-    width: 600px;
-    height: 120px;
-    right: 0px;
-    bottom: 0px;
-    background: #c22222;
-}
-
 .welcome-pictures {
     margin-left: auto;
 }
+
+.welcome-gallery {
+    position: relative;
+    top: 350px;
+    display: grid;
+   /* grid-template-columns: repeat(2,1fr);*/
+    grid-gap: 20px;
+}
+
+.welcome-gallery-second {
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+}
+
+/*WELCOME SLIDER*/
+    .welcome-slider {
+        overflow-y: hidden;
+        position: absolute;
+        width: 1000px;
+        height: 810px;
+        right: 0;
+        margin: 0px 20px 0px 0px;
+    }
+
+    .slider-in-welcome {
+        overflow: hidden;
+    }
+
+    .slider-in-welcome .slick-list {
+        width: 100%;
+    }
+
+    .slider-in-welcome .slick-track {
+        display: flex;
+    }
+
+    .slider-in-welcome .slider-item {
+       visibility: hidden;
+    }
+
+    .slick-slide.slick-active {
+        visibility: inherit;
+    }
+
+    .slider-in-welcome .slick-arrow {
+        position: absolute;
+        z-index: 228;
+        font-size: 0;
+        width: 30px;
+        height: 8px;
+        bottom: 52px;
+        border: 0;
+    }
+
+    .slider-in-welcome .slick-arrow.slick-arrow.slick-prev {
+        right: 70px;
+        background: url("./assets/img/welcome-slider/left←.svg") 0 0 / 100% no-repeat;
+    }
+
+    .slider-in-welcome .slick-arrow.slick-arrow.slick-next {
+        right: 20px;
+        background: url("./assets/img/welcome-slider/right←.svg") 0 0 / 100% no-repeat;
+    }
+
+    .slider-in-welcome .slick-dots {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        width: 600px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        /*justify-content: center;*/
+        background:#030303;
+        z-index: 23;
+    }
+
+    .slider-in-welcome .slick-dots li {
+        position: relative;
+        left: 215px;
+        list-style: none;
+        margin: 0 25px 0 0;
+    }
+
+    .slider-in-welcome .slick-dots button {
+        font-size: 0;
+        width: 16px;
+        height: 16px;
+        border: 0;
+    }
+    
+    .slider-in-welcome .slick-dots li.slick-active button {
+        background: #D2B183;
+    }
+
+    .count {
+        position: absolute;
+        right: 450px;
+        bottom: 36px;
+        font-family: Roboto;
+        line-height: 40px;
+        color: #FFFFFF;
+        z-index: 40;
+    }
+
+    .slid-pic {
+        right: 501px;
+    }
+
+    .elem-stick {
+        right: 485px;
+    }
+/*WELCOME SLIDER*/
+
 /*WELCOME STOP*/
+
 
 
 
@@ -361,30 +484,80 @@
 }
 
 .video-player {
+    height: 735px;
     margin-bottom: 40px;
 }
 
 .video-slider {
-
+    margin-bottom: 75px;
 }
 
 /*SLIDER*/
 .slider {
     position: relative;
+    gap: 20px;
 }
-.slick-list {
+.slider .slick-list {
     overflow: hidden;
 }
-.slick-track {
+.slider .slick-track {
     display: flex;
+    gap: 40px;
 }
 
-#video > div > div.video-slider > div > div > div > div.slider-item.slick-slide.slick-current.slick-active {
-    margin-bottom: 40px;
+.slider .slider-item {
+    height: 254px;
 }
 
-#video > div > div.video-slider > div > button.slick-next.slick-arrow {
-    margin-bottom: 75px;
+.slider element.style {
+    width: 400xp;
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    /* top: 50%; */
+    /* margin: -12px 0px 0px 0px; */
+    z-index: 10;
+    font-size: 0;
+    width: 10px;
+    height: 12px;
+    border: 0;
+    bottom: 0px;
+}
+
+.slider .slick-arrow.slick-prev {
+    /* left: 0; */
+    background: url("../слайдер ебаного музея/assets/svg/Vector\ \(Stroke\)\ p.svg") 0 0 / 100% no-repeat;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+    background: url("../слайдер ебаного музея/assets/svg/Vector\ \(Stroke\)\ n.svg") 0 0 / 100% no-repeat;
+}
+
+.slider .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px 0px 0px;
+}
+
+.slider .slick-dots li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+.slider .slick-dots button {
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #999999;
+    border: 0;
+}
+
+.slider .slick-dots li.slick-active button {
+    background: #030303;
 }
 /*SLIDER*/
 
@@ -421,48 +594,6 @@
     width: 100%;
     height: 360px;
 }
-
-/* .gallery-pictures {
-    position: relative;
-    display: flex;
-    gap: 36px;
-}
-
-.left-section-gallery {
-    display: block;
-    gap: 24px;
-    padding-top: 50px;
-    width: 33.33%;
-}
-
-.mid-section-gallery {
-    display: block;
-    gap: 24px;
-    width: 33.33%;
-}
-
-.right-section-gallery {
-    display: block;
-    gap: 24px;
-    padding-top: 50px;
-    width: 33.33%;
-}
-
-.gallery-pic {
-    width: 100%;
-}
-
-.magr-bt-24 {
-    margin-bottom: 24px;
-}
-
-.background {
-    position: absolute;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-    bottom: 0;
-    width: 100%;
-    height: 360px;
-} */
 /*GALLERY STOP*/
 
 
@@ -475,6 +606,7 @@
 .tickets-content {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 75px;
 }
 
 .ticket-pic {
@@ -484,7 +616,7 @@
 .img-type-ticket {
     display: flex;
     justify-content: space-between;
-    width: 1050px;
+    max-width: 1050px;
 }
 
 .ticket-type {
@@ -494,15 +626,6 @@
 .inp-radio {
     margin-right: 28px;
 }
-
-/* .text-content-title {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 33px;
-    color: #000000;
-} */
 
 .ticket-amount {
     display: flex;
@@ -561,10 +684,11 @@
     background: transparent;
     color: #000000;
   }
-   .input-number input[type="number"]::-webkit-outer-spin-button,
-  .input-number input[type="number"]::-webkit-inner-spin-button {
+
+.input-number input[type="number"]::-webkit-outer-spin-button,
+.input-number input[type="number"]::-webkit-inner-spin-button {
       display: none;
-  }
+}
 
 .number {
     width: 19px;
@@ -591,11 +715,6 @@
     letter-spacing: 2px;
   }
 
-  .img-no-wrapper {
-      width: 100%;
-      height: 400px;
-  }
-
   .text-content-title-tickets {
     font-family: Roboto;
     font-style: normal;
@@ -603,6 +722,11 @@
     font-size: 28px;
     line-height: 33px;
     color: #000000;
+  }
+
+  .img-no-wrapper {
+    background: url("./assets/img/picwithoutwrapp.jpg") no-repeat  center ; 
+    height: 400px;
   }
 /*TICKETS STOP*/
 
@@ -729,7 +853,7 @@
 @media (max-width: 1024px) {
     /*HEADER*/
     .header {
-        min-height: 130px;
+        height: 130px;
     }
 
     .header-content {
@@ -743,11 +867,15 @@
 
 
     /*WELCOME*/
-    .welcome-container {
+    #welcome {
+        height: 585px;
+    }
+
+   /* .welcome-container {
         background-size: 700px 525px;
         max-height: 585px;
     }
-
+*/
     .welcome-title-and-button {
         padding-top: 50px;
     }
@@ -767,8 +895,62 @@
     }
 
     .welcome-slider {
-        min-width: 700px
+        width: 700px;
+        height: 585px;
     }
+
+    .slider-in-welcome .slick-track {
+        height: 525px
+    }
+
+    .slider-in-welcome .slick-arrow.slick-arrow.slick-next {
+        right: 75px;
+    }
+
+    .slider-in-welcome .slick-arrow.slick-arrow.slick-prev {
+        right: 125px;
+    }
+
+     .slider-in-welcome .slick-dots {
+        width: 700px;
+    }
+
+    .slider-in-welcome .slick-dots li {
+        left: 340px;
+    }
+
+    .slider-in-welcome .slick-dots button {
+        width: 12px;
+        height: 12px;
+    }
+
+    .slid-pic {
+        right: 453px;
+    }
+
+    .elem-stick {
+        right: 438px;
+    }
+
+    .total-amount {
+        right: 405px;
+    }
+
+   /* .slider-in-welcome .slick-list {
+        left: 200px;
+        width: 700px;
+        height: 525px;
+    }*/
+
+    /*.slider-in-welcome .slick-dots {
+        width: 700px;
+        bottom: 61px;
+        left: 250px;
+    }*/
+
+   /* .slider-in-welcome .slick-arrow {
+        top: 12px;
+    }*/
     /*WELCOME STOP*/
 
 
@@ -785,7 +967,7 @@
         display: flex;
         align-items: center;
         position: fixed;
-        top: 52px;
+        top: 54px;
         right: 20px;
         width: 26px;
         height: 26px;
@@ -820,7 +1002,7 @@
         top: 130px;
         left: -100%;
         width: 297px;
-        height: 585px;
+        height: 298px;
         flex-direction: column;
     }
 
@@ -918,6 +1100,10 @@
      
 
     /*VIDEO*/
+    .video-player {
+        height: 504px;
+    }
+
     .title-without-line {
         font-size: 50px;
         line-height: 75px;
@@ -933,6 +1119,14 @@
     .title-text {
         margin-bottom: 40px;
     }
+
+    .video-slider {
+        margin-bottom: 60px;
+    }
+
+    .slider .slider-item {
+        height: 170px;
+    }
     /*VIDEO STOP*/
 
     /*GLLAERY*/
@@ -942,6 +1136,10 @@
     /*GLLAERY STOP*/
 
     /*TICKETS*/
+    #tickets {
+        margin-bottom: 60px;
+    }
+
     .ticket-type {
         display: none;
     }
@@ -949,6 +1147,10 @@
     .ticket-amount {
         align-items: flex-start;
         margin-left: 80px;
+    }
+
+    .tickets-content {
+        margin-bottom: 60px;
     }
     /*TICKETS STOP*/
 
@@ -987,9 +1189,13 @@
         padding-top: 40px;
     }
 
+    .marg-bt-50 {
+        margin-bottom: 40px;
+    }
+
     /*HEADER*/
     .header {
-        min-height: 110px;
+        height: 110px;
     }
 
     .header-content {
@@ -1033,18 +1239,79 @@
         font-size: 20px;
         text-align: center;
         margin-bottom: 50px;
+        padding-top: 18px;
     }
 
     .welcome-slider {
-        height: 87px;
+       width: 95%;
+       height: 646px;
+       top: 214px;
+    }
+
+   /* .slider-in-welcome {
+        margin: 0 0 0 -10px;
+    }*/
+
+    .slider-in-welcome .slick-track {
+        height: 546px;
+    }
+
+    .slider-in-welcome .slick-list {
+        padding: 0 !important;
+    }
+
+    .slider-in-welcome .slick-dots {
         width: 100%;
-        bottom: -47px;
-        min-width: 0;
+        height: 100px;
+        justify-content: center;
+        right: 277px;
+    }
+
+    .count {
+        bottom: 25px;
+    }
+
+    .slid-pic {
+        right: 75%;
+    }
+
+    .elem-stick {
+        right: 72%;
+    }
+
+    .total-amount {
+        right: 68%;
+    }
+
+    .slider-in-welcome .slick-dots li {
+        left: 282px;
+    }
+
+    .slider-in-welcome .slick-arrow {
+        bottom: 43px;
+    }
+
+    .slider-in-welcome .slick-arrow.slick-arrow.slick-next {
+        right: 23%;
+    }
+
+    .slider-in-welcome .slick-arrow.slick-arrow.slick-prev {
+        right: 29%;
     }
     /*WELCOME STOP*/
 
-    /*VIRTUAL*/
+    .jopa {
+        position: absolute;
+        width: 100px;
+        height: 10px;
+        bottom: 100px;
+        background: red;
+        z-index: 9999;
+        left: 0;
 
+    }
+
+    /*VIRTUAL*/
     .title-with-line {
         font-size: 40px;
         line-height: 60px;
@@ -1066,6 +1333,17 @@
     }
     /*VIRTUAL STOP*/
 
+    /*VIDEO*/
+    .video-slider {
+        margin-bottom: 81px;
+    }
+
+    .slider .slick-dots {
+        padding: 21px 0px 0px 0px;
+    }
+    /*VIDEO STOP*/
+
+
     /*EXPLORE*/
     .text-about-explore {
         display: none;
@@ -1086,12 +1364,25 @@
     }
     /*EXPLORE STOP*/
 
+
+
     /*VIDEO*/
+    .video-player {
+        height: 382px;
+    }
+
+    .slider .slider-item {
+        height: 199px;
+    }
+
+    
+
     .title-without-line {
         font-size: 40;
         line-height: 60px;
     }
     /*VIDEO STOP*/
+
 
 
     /*GALLERY*/
@@ -1102,14 +1393,44 @@
 
 
 
-    .marg-bt-50 {
+    /*TICKETS*/
+    #tickets {
         margin-bottom: 40px;
     }
 
+    .tickets-content {
+        margin-bottom: 60px;
+    }
+
+    .img-no-wrapper {
+        height: 300px;
+    }
+
+    /*TICKETS STOP*/
+
+
+
+    /*CONTACT*/
+    .contacts-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 67px;
+    }
+
+    .contacts-map {
+        width: 100%;
+        height: 476px;
+    }
+    /*CONTACT*/
+
+
+
+    /*FOOTER*/
     .footer-container {
         display: flex;
         flex-wrap: wrap;
-        width: 638px;
+        max-width: 638px;
         justify-content: space-between;
     }
 
@@ -1134,82 +1455,221 @@
         margin-left: auto;
         margin-top: 50px;
     }
+    /*FOOTER STOP*/
 }
 
- /* @media (max-width: 1450px){
+@media  (max-width: 580px) {
     .places-cards {
-        display: grid;
-        justify-content: center;
-        grid-template: repeat(3, 1fr) / repeat(2, 330px);
-    }
-
-    .cards-hover {
-        width: 100%;
-    }  
-} */
-
-/* @media (max-width: 1290px){
-    .ticket-type {
-        display: none;
-    }
-
-} */
-
- /* @media (max-width: 1024px){
-    .header-container-nav {
-        display: none;
-    }
-
-    .show-tablet{
-        display: block;
-    }
-
-    .hide-tablet{
-        display: none;
-    }
-
-    .explore-content{
-        flex-direction: column;
-    }
-
-    .explore-pictures {
-        justify-content: center;
-        padding-top: 90px;
-        margin-bottom: 75px;
-        display: flex;
-    }
-
-    .text-about-video {
-        display: none;
+        grid-template: repeat(1, 1fr) / repeat(1, 200px);
     }
 
     .tickets-content {
-        gap: 40px;
-    }
-
-    .ticket-type {
-        display: none;
+        display: flex;
+        flex-direction: column;
     }
 
     .ticket-amount {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        margin-left: 0px;
     }
 
-    .contacts-content {
-        gap: 16px;
+    .img-type-ticket {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1050px;
+        height: 180px;
     }
 
-    .contacts-map {
+    .img-tickets-div {
         width: 100%;
-        min-height: 454px;
+    }
+
+    .ticket-pic {
+        width: 100%;
+        height: 180px;
+    }
+}
+
+@media  (max-width: 420px) {
+    .header {
+        height: 90px;
+    }
+
+    .menu-btn {
+        top: 33px;
+    }
+
+    .icon-logo {
+        height: 16px;
+    }
+
+    .text-logo {
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 5px;
+    }
+
+    #welcome {
+        height: 544px;
+    }
+
+    .welcome-title {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .welcome-subtitle {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2px;
+    }
+
+    .welcome-slider {
+        width: 90%;
+        height: 365px;
+        top: 167px;
+    }
+
+    .slick-slide.slick-active {
+        width: 380px;
+        height: 285px;
+    }
+
+    .slider-in-welcome .slick-dots {
+        width: 380px;
+        height: 80px;
+        right: 280px;
+        justify-content: center;
+    }
+
+    .slider-in-welcome .slick-dots button {
+        width: 7px;
+        height: 7px;
+    }
+
+    .slider-in-welcome .slick-dots li {
+        margin: 0 10px 0 0;
+    }
+
+    .slider-in-welcome .slick-arrow {
+        bottom: 30px;
+        width: 20px;
+    }
+
+    .slider-in-welcome .slick-arrow.slick-arrow.slick-next {
+        right: 20%;
+    }
+
+    .count {
+        bottom: 13px;
+    }
+
+    .slid-pic {
+        right: 76%;
+    }
+
+    .elem-stick {
+        right: 74%;
+    }
+
+    .places-cards {
+        grid-template: repeat(1, 1fr) / repeat(1, 280px);
+    }
+
+    #welcome > div > div.welcome-social-network > ul {
+        gap: 5px;
+    }
+
+    .welcome-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 12px;
+        height: 95px;
+        top: 328px;
+    }
+
+    .welcome-gallery-item {
+        object-fit: cover;
+    }
+
+    .welcome-social-network {
+        top: 350px;
+    }
+
+    .menu-box {
+        top: 88px;
+    }
+
+    /*VIDEO*/
+    .video-player {
+        height: 222px;
+    }
+
+    .video-slider {
+        margin-bottom: 40px;
+    }
+
+    .slider .slick-dots {
+        padding: 40px 0px 0px 0px;
+    }
+    /*VIDEO STOP*/
+
+    /*TICKETS*/
+   
+    /*TICKETS STOP*/
+
+    /*CONTACTS*/
+    .contacts-map {
+        height: 248px;
+    }
+    /*CONTACTS STOP*/
+
+
+
+    /*FOOTER*/
+    .footer-container-nav { 
+        margin-top: 44px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        width: auto;
     }
 
     .footer-nav {
-        margin-left: 30px;
-        margin-right: 30px;
-        gap: 25px 50px;
+        margin-left: 0;
     }
-}  */
 
+    .links {
+        margin-top: 40px;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .busement-list {
+       margin-left: 0;
+       gap: 5px;
+    }
+
+    body > footer > div:nth-child(1) > div > div > nav > ul > li:nth-child(2) > a, 
+    body > footer > div:nth-child(1) > div > div > nav > ul > li:nth-child(4) > a,
+    body > footer > div:nth-child(1) > div > div > nav > ul > li:nth-child(6) > a {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .RollingSS {
+        display: none;
+    }
+    /*FOOTER STOP*/
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: initial;
+}
