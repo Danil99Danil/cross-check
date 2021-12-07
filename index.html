@@ -14,7 +14,7 @@
             <div class="header-content">
                 <div class="container-logo">
                     <a href=""><img class="icon-logo" src=".//assets/svg/logo.svg" alt="logo"></a>
-                    <a class="text-logo" href="/museum/index.html">louvre</a>
+                    <a class="text-logo" href="../museum/index.html">louvre</a>
                 </div>
                 <nav class="header-container-nav">
                     <ul class="nav-list">
@@ -320,7 +320,7 @@
                                 <p class="text-content marg-bt-15">Basic 18+</p>
                                 <div class="input-number">
                                     <button class="number minus" type="button" onclick="this.nextElementSibling.stepDown();"><a href="#!" class="minus">-</a></button>
-                                    <input class="number-of-ticketsBasic" type="number" min="0" max="100">
+                                    <input class="number-of-ticketsBasic" type="number" min="0" max="100" value="0">
                                     <button class="number plus" type="button" onclick="this.previousElementSibling.stepUp();"><a href="#!" class="plus">+</a></button>
                                 </div>
                             </div>
@@ -328,11 +328,11 @@
                                 <p class="text-content marg-bt-15">Senior 65+</p>
                                 <div class="input-number">
                                     <button class="number minus" type="button" onclick="this.nextElementSibling.stepDown();"><a href="#!" class="minus">-</a></button>
-                                    <input class="number-of-ticketsSenior" type="number" min="0" max="100">
+                                    <input class="number-of-ticketsSenior" type="number" min="0" max="100" value="0">
                                     <button class="number plus" type="button" onclick="this.previousElementSibling.stepUp();"><a href="#!" class="plus">+</a></button>
                                 </div>
                             </div>    
-                            <p id="clicks1" class="text-content-title-tickets marg-bt-60">Total €<span id="price"> 0</span></p>
+                            <p id="clicks1" class="text-content-title-tickets marg-bt-60">Total €<span id="price"></span></p>
                             <button class="ticket-buy-button">Buy Now</button>
                     </div>
                 </div>
@@ -362,7 +362,7 @@
                 <div class="footer-container marg-bt-50">
                     <div class="container-logo">
                         <a href=""><img src=".//assets/svg/logo.svg" alt="logo"></a>
-                        <a class="text-logo" href="/museum/index.html">louvre</a>
+                        <a class="text-logo" href="../museum/index.html">louvre</a>
                     </div> 
                     <nav class="footer-container-nav">
                         <ul class="nav-list footer-nav">
